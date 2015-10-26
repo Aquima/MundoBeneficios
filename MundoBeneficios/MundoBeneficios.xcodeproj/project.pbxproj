@@ -14,9 +14,11 @@
 		27652CA31BD5958A00208DD6 /* MundoBeneficios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27652CA11BD5958A00208DD6 /* MundoBeneficios.xcdatamodeld */; };
 		27652CA51BD5958A00208DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27652CA41BD5958A00208DD6 /* Assets.xcassets */; };
 		27652CA81BD5958A00208DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27652CA61BD5958A00208DD6 /* LaunchScreen.storyboard */; };
+		5101E3253F3CB183F96D6479 /* libPods-MundoBeneficios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0403F46FE8B726CB1827A554 /* libPods-MundoBeneficios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0403F46FE8B726CB1827A554 /* libPods-MundoBeneficios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MundoBeneficios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27652C921BD5958A00208DD6 /* MundoBeneficios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MundoBeneficios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27652C961BD5958A00208DD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27652C981BD5958A00208DD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		27652CA41BD5958A00208DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27652CA71BD5958A00208DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27652CA91BD5958A00208DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68980675A2D6643A854147FA /* Pods-MundoBeneficios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MundoBeneficios.release.xcconfig"; path = "Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios.release.xcconfig"; sourceTree = "<group>"; };
+		FE97A11E865AE880BA5C07E5 /* Pods-MundoBeneficios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MundoBeneficios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5101E3253F3CB183F96D6479 /* libPods-MundoBeneficios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				27652C941BD5958A00208DD6 /* MundoBeneficios */,
 				27652C931BD5958A00208DD6 /* Products */,
+				6A79B49E476B2252D87E6A21 /* Pods */,
+				B10DF5522EA0A13BDF4D814A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6A79B49E476B2252D87E6A21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE97A11E865AE880BA5C07E5 /* Pods-MundoBeneficios.debug.xcconfig */,
+				68980675A2D6643A854147FA /* Pods-MundoBeneficios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B10DF5522EA0A13BDF4D814A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0403F46FE8B726CB1827A554 /* libPods-MundoBeneficios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27652CAC1BD5958A00208DD6 /* Build configuration list for PBXNativeTarget "MundoBeneficios" */;
 			buildPhases = (
+				2714B663A88954DE79C927FD /* Check Pods Manifest.lock */,
 				27652C8E1BD5958A00208DD6 /* Sources */,
 				27652C8F1BD5958A00208DD6 /* Frameworks */,
 				27652C901BD5958A00208DD6 /* Resources */,
+				17B796EE99EB9BB7F8E52A73 /* Embed Pods Frameworks */,
+				9A93803755402C8D42D64509 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -113,6 +140,7 @@
 				TargetAttributes = {
 					27652C911BD5958A00208DD6 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 73A3QCVC2H;
 					};
 				};
 			};
@@ -146,6 +174,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17B796EE99EB9BB7F8E52A73 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2714B663A88954DE79C927FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A93803755402C8D42D64509 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27652C8E1BD5958A00208DD6 /* Sources */ = {
@@ -217,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -254,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -263,22 +339,28 @@
 		};
 		27652CAD1BD5958A00208DD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE97A11E865AE880BA5C07E5 /* Pods-MundoBeneficios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MundoBeneficios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.MundoBeneficios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.mundobeneficios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		27652CAE1BD5958A00208DD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68980675A2D6643A854147FA /* Pods-MundoBeneficios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MundoBeneficios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.MundoBeneficios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.mundobeneficios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -302,6 +384,7 @@
 				27652CAE1BD5958A00208DD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
