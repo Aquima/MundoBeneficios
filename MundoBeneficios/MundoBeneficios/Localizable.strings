@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  MundoBeneficios
+
+  Created by Raul Quispe on 10/26/15.
+  Copyright © 2015 Quima. All rights reserved.
+*/
+//LogInViewController
+"TITLE_MESSAGE" = "Introduce tus datos para ingresar:";
+"PLACEHOLDER_DNI" = "DNI";
+"PLACEHOLDER_PASSWORD" = "Contraseña";
+"TITLE_BTN_ENTER" = "Ingresar";
+"TITLE_MESSAGE_REGISTER" = "Si no tienes una cuenta";
+"TITLE_BTN_OPEN_REGISTER" = "Regístrate aquí";
+"TITLE_MESSAGE_FORGET" = "¿Olvidaste tu contraseña?";
+"TITLE_BTN_OPEN_FORGET" = "Recupera tu contraseña";
