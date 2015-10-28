@@ -14,13 +14,15 @@
 		27652CA31BD5958A00208DD6 /* MundoBeneficios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27652CA11BD5958A00208DD6 /* MundoBeneficios.xcdatamodeld */; };
 		27652CA51BD5958A00208DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27652CA41BD5958A00208DD6 /* Assets.xcassets */; };
 		27652CA81BD5958A00208DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27652CA61BD5958A00208DD6 /* LaunchScreen.storyboard */; };
-		279305121BDF05ED004C416B /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279305111BDF05ED004C416B /* LogInViewController.m */; };
+		278B6F7E1BE0528700636EC3 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278B6F781BE0528700636EC3 /* LogInViewController.m */; };
+		278B6F7F1BE0528700636EC3 /* FormTexfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 278B6F7B1BE0528700636EC3 /* FormTexfield.m */; };
+		278B6F801BE0528700636EC3 /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 278B6F7D1BE0528700636EC3 /* MenuButton.m */; };
+		278B6F831BE052A400636EC3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278B6F821BE052A400636EC3 /* RegisterViewController.m */; };
+		278B6F871BE07CDD00636EC3 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278B6F861BE07CDD00636EC3 /* ForgetViewController.m */; };
 		279305141BDF113E004C416B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 279305131BDF113E004C416B /* Localizable.strings */; };
 		279305191BDF14C0004C416B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 279305181BDF14C0004C416B /* UIColor+Hex.m */; };
 		279305261BDF1981004C416B /* UIFont+AvenirLTStd.m in Sources */ = {isa = PBXBuildFile; fileRef = 279305231BDF1981004C416B /* UIFont+AvenirLTStd.m */; };
 		279305271BDF1981004C416B /* UIFont+SourceSansPro.m in Sources */ = {isa = PBXBuildFile; fileRef = 279305251BDF1981004C416B /* UIFont+SourceSansPro.m */; };
-		279305411BDF21BC004C416B /* FormTexfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 2793053C1BDF21BC004C416B /* FormTexfield.m */; };
-		279305421BDF21BC004C416B /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2793053E1BDF21BC004C416B /* MenuButton.m */; };
 		5101E3253F3CB183F96D6479 /* libPods-MundoBeneficios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0403F46FE8B726CB1827A554 /* libPods-MundoBeneficios.a */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +39,16 @@
 		27652CA41BD5958A00208DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27652CA71BD5958A00208DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27652CA91BD5958A00208DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		279305101BDF05ED004C416B /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
-		279305111BDF05ED004C416B /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		278B6F771BE0528700636EC3 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		278B6F781BE0528700636EC3 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		278B6F7A1BE0528700636EC3 /* FormTexfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTexfield.h; sourceTree = "<group>"; };
+		278B6F7B1BE0528700636EC3 /* FormTexfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTexfield.m; sourceTree = "<group>"; };
+		278B6F7C1BE0528700636EC3 /* MenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
+		278B6F7D1BE0528700636EC3 /* MenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuButton.m; sourceTree = "<group>"; };
+		278B6F811BE052A400636EC3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		278B6F821BE052A400636EC3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		278B6F851BE07CDD00636EC3 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
+		278B6F861BE07CDD00636EC3 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		279305131BDF113E004C416B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		279305171BDF14C0004C416B /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		279305181BDF14C0004C416B /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -59,10 +69,6 @@
 		279305331BDF1A20004C416B /* AvenirLTStd-MediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-MediumOblique.otf"; sourceTree = "<group>"; };
 		279305341BDF1A20004C416B /* AvenirLTStd-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Oblique.otf"; sourceTree = "<group>"; };
 		279305351BDF1A20004C416B /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
-		2793053B1BDF21BC004C416B /* FormTexfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTexfield.h; sourceTree = "<group>"; };
-		2793053C1BDF21BC004C416B /* FormTexfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTexfield.m; sourceTree = "<group>"; };
-		2793053D1BDF21BC004C416B /* MenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
-		2793053E1BDF21BC004C416B /* MenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuButton.m; sourceTree = "<group>"; };
 		68980675A2D6643A854147FA /* Pods-MundoBeneficios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MundoBeneficios.release.xcconfig"; path = "Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios.release.xcconfig"; sourceTree = "<group>"; };
 		FE97A11E865AE880BA5C07E5 /* Pods-MundoBeneficios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MundoBeneficios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +130,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		278B6F751BE0525000636EC3 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				278B6F811BE052A400636EC3 /* RegisterViewController.h */,
+				278B6F821BE052A400636EC3 /* RegisterViewController.m */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		278B6F761BE0526100636EC3 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				278B6F791BE0528700636EC3 /* Views */,
+				278B6F771BE0528700636EC3 /* LogInViewController.h */,
+				278B6F781BE0528700636EC3 /* LogInViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		278B6F791BE0528700636EC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				278B6F7A1BE0528700636EC3 /* FormTexfield.h */,
+				278B6F7B1BE0528700636EC3 /* FormTexfield.m */,
+				278B6F7C1BE0528700636EC3 /* MenuButton.h */,
+				278B6F7D1BE0528700636EC3 /* MenuButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		278B6F841BE07CD000636EC3 /* ForgetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				278B6F851BE07CDD00636EC3 /* ForgetViewController.h */,
+				278B6F861BE07CDD00636EC3 /* ForgetViewController.m */,
+			);
+			path = ForgetViewController;
+			sourceTree = "<group>";
+		};
 		2793050E1BDF05C4004C416B /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +182,9 @@
 		2793050F1BDF05D9004C416B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				279305361BDF21BC004C416B /* Views */,
-				279305101BDF05ED004C416B /* LogInViewController.h */,
-				279305111BDF05ED004C416B /* LogInViewController.m */,
+				278B6F841BE07CD000636EC3 /* ForgetViewController */,
+				278B6F761BE0526100636EC3 /* LoginViewController */,
+				278B6F751BE0525000636EC3 /* RegisterViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,17 +236,6 @@
 				279305291BDF1A13004C416B /* Helvetica-Neue-LT.ttf */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		279305361BDF21BC004C416B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2793053B1BDF21BC004C416B /* FormTexfield.h */,
-				2793053C1BDF21BC004C416B /* FormTexfield.m */,
-				2793053D1BDF21BC004C416B /* MenuButton.h */,
-				2793053E1BDF21BC004C416B /* MenuButton.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		6A79B49E476B2252D87E6A21 /* Pods */ = {
@@ -344,15 +378,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278B6F831BE052A400636EC3 /* RegisterViewController.m in Sources */,
+				278B6F7E1BE0528700636EC3 /* LogInViewController.m in Sources */,
 				279305271BDF1981004C416B /* UIFont+SourceSansPro.m in Sources */,
 				27652C9D1BD5958A00208DD6 /* ViewController.m in Sources */,
 				279305191BDF14C0004C416B /* UIColor+Hex.m in Sources */,
-				279305411BDF21BC004C416B /* FormTexfield.m in Sources */,
+				278B6F7F1BE0528700636EC3 /* FormTexfield.m in Sources */,
 				27652C9A1BD5958A00208DD6 /* AppDelegate.m in Sources */,
+				278B6F871BE07CDD00636EC3 /* ForgetViewController.m in Sources */,
 				279305261BDF1981004C416B /* UIFont+AvenirLTStd.m in Sources */,
-				279305421BDF21BC004C416B /* MenuButton.m in Sources */,
-				279305121BDF05ED004C416B /* LogInViewController.m in Sources */,
 				27652CA31BD5958A00208DD6 /* MundoBeneficios.xcdatamodeld in Sources */,
+				278B6F801BE0528700636EC3 /* MenuButton.m in Sources */,
 				27652C971BD5958A00208DD6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,12 +500,14 @@
 			baseConfigurationReference = FE97A11E865AE880BA5C07E5 /* Pods-MundoBeneficios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MundoBeneficios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.mundobeneficios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "88654a67-a5c8-4b65-9556-6d2ce7db638c";
 			};
 			name = Debug;
 		};
@@ -478,12 +516,14 @@
 			baseConfigurationReference = 68980675A2D6643A854147FA /* Pods-MundoBeneficios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MundoBeneficios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.mundobeneficios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "88654a67-a5c8-4b65-9556-6d2ce7db638c";
 			};
 			name = Release;
 		};

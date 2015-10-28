@@ -5,7 +5,7 @@
   Created by Raul Quispe on 10/26/15.
   Copyright © 2015 Quima. All rights reserved.
 */
-//LogInViewController
+//LogInViewControllerr
 "TITLE_MESSAGE" = "Introduce tus datos para ingresar:";
 "PLACEHOLDER_DNI" = "DNI";
 "PLACEHOLDER_PASSWORD" = "Contraseña";
@@ -14,3 +14,13 @@
 "TITLE_BTN_OPEN_REGISTER" = "Regístrate aquí";
 "TITLE_MESSAGE_FORGET" = "¿Olvidaste tu contraseña?";
 "TITLE_BTN_OPEN_FORGET" = "Recupera tu contraseña";
+//RegisterViewController
+"TITLE_MESSAGE_REGISTER" = "Si eres un cliente de interseguro y aún no \ntienes una cuenta, registrate con tu DNI:";
+"TITLE_BTN_VERIFY" = "Verificar";
+"PLACEHOLDER_NAME" = "Nombre";
+"PLACEHOLDER_LASTNAME" = "Apellido";
+"PLACEHOLDER_EMAIL" = "Correo";
+"PLACEHOLDER_BIRTHDAY" = "Fecha de Nacimiento";
+"PLACEHOLDER_PHONE" = "Teléfono";
+"PLACEHOLDER_PRODUCT" = "Productos";
+"TITLE_FACEBOOK" = "Conectar con facebook";
