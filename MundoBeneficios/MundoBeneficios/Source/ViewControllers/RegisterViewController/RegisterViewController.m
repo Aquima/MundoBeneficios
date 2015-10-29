@@ -10,6 +10,8 @@
 #import "FormTexfield.h"
 #import "UIColor+Hex.h"
 #import "UIFont+AvenirLTStd.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 #pragma mark - Viewcontrollers
 
@@ -27,6 +29,8 @@
     FormTexfield*txtBithday;
     FormTexfield*txtPhone;
     FormTexfield*txtProduct;
+    UIScrollView*scrollView;
+    NSString*strForSocialId;
 }
 
 
@@ -85,6 +89,7 @@
 }
 -(UIView*)getBodyView{
     UIScrollView*content = [[UIScrollView alloc] initWithFrame:CGRectMake(0,172, sizeView.width, sizeView.height-172)];
+    
     [content setBackgroundColor:[UIColor clearColor]];
   //  [content setFrame:CGRectMake(0, 64, 320,sizeView.height-172)];
     [content setScrollEnabled:YES];
@@ -137,7 +142,7 @@
     }
     [txtName setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
     txtName.returnKeyType = UIReturnKeyDone;
-    txtName.secureTextEntry = true;
+    txtName.secureTextEntry = false;
     [txtName setDelegate:self];
     [content addSubview:txtName];
     
@@ -157,7 +162,7 @@
     }
     [txtLastName setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
     txtLastName.returnKeyType = UIReturnKeyDone;
-    txtLastName.secureTextEntry = true;
+    txtLastName.secureTextEntry = false;
     [txtLastName setDelegate:self];
     [content addSubview:txtLastName];
     
@@ -177,7 +182,7 @@
     }
     [txtEmail setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
     txtEmail.returnKeyType = UIReturnKeyDone;
-    txtEmail.secureTextEntry = true;
+    txtEmail.secureTextEntry = false;
     [txtEmail setDelegate:self];
     [content addSubview:txtEmail];
     
@@ -197,7 +202,7 @@
     }
     [txtBithday setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
     txtBithday.returnKeyType = UIReturnKeyDone;
-    txtBithday.secureTextEntry = true;
+    txtBithday.secureTextEntry = false;
     [txtBithday setDelegate:self];
     [content addSubview:txtBithday];
     
@@ -217,7 +222,7 @@
     }
     [txtPhone setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
     txtPhone.returnKeyType = UIReturnKeyDone;
-    txtPhone.secureTextEntry = true;
+    txtPhone.secureTextEntry = false;
     [txtPhone setDelegate:self];
     [content addSubview:txtPhone];
     
@@ -237,7 +242,7 @@
     }
     [txtProduct setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
     txtProduct.returnKeyType = UIReturnKeyDone;
-    txtProduct.secureTextEntry = true;
+    txtProduct.secureTextEntry = false;
     [txtProduct setDelegate:self];
     [content addSubview:txtProduct];
     
@@ -256,6 +261,10 @@
     [lblTitleFacebook setTextAlignment:NSTextAlignmentCenter];
     [contentFacebookBtn addSubview:lblTitleFacebook];
     
+    UIButton*btnFacebook = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, contentFacebookBtn.frame.size.width, contentFacebookBtn.frame.size.height)];
+    [btnFacebook addTarget:self action:@selector(getFacebookProfile:) forControlEvents:UIControlEventTouchUpInside];
+    [contentFacebookBtn addSubview:btnFacebook];
+    scrollView = content;
     return content;
 }
 #pragma mark - Texfield
@@ -275,6 +284,70 @@
 #pragma mark - Actions
 -(IBAction)goBack:(id)sender{
     [self.navigationController popToRootViewControllerAnimated:true];
+}
+-(IBAction)getFacebookProfile:(id)sender{
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login logInWithReadPermissions:@[@"public_profile", @"email",@"user_about_me",@"user_hometown",@"user_location"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        if (error) {
+            // Process error
+        } else if (result.isCancelled) {
+            // Handle cancellations
+        } else {
+            // If you ask for multiple permissions at once, you
+            // should check if specific permissions missing
+            if ([result.grantedPermissions containsObject:@"email"]) {
+                // Do work
+            }
+            if (result.token) {
+                
+                [self getFacebookProfileInfo];
+                //  FBSDKProfile.currentUser.Correo;
+            }
+        }
+    }];
+}
+#pragma mark - Facebook Methods
+-(void)getFacebookProfileInfo {
+    
+    FBSDKGraphRequest *requestMe = [[FBSDKGraphRequest alloc]initWithGraphPath:@"me?fields=id,name,last_name,first_name,locale,bio,email,hometown&debug=all" parameters:nil];
+    
+    FBSDKGraphRequestConnection *connection = [[FBSDKGraphRequestConnection alloc] init];
+    
+    [connection addRequest:requestMe completionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+        
+        if(result)
+        {
+            NSLog(@"%@",result);
+
+            if ([result objectForKey:@"email"]) {
+                [txtEmail setText:[result objectForKey:@"email"]];
+            }
+            if ([result objectForKey:@"first_name"]) {
+                
+                NSString*strFirstName = [result objectForKey:@"first_name"];
+                [txtName setText:strFirstName];
+            }
+            if ([result objectForKey:@"last_name"]) {
+                NSString*strLastName = [result objectForKey:@"last_name"];
+                [txtLastName setText:strLastName];
+            }
+            if ([result objectForKey:@"bio"]) {
+               
+            }
+            if ([result objectForKey:@"id"]) {
+                strForSocialId = [NSString stringWithFormat:@"%@10",[result objectForKey:@"id"]];
+            //    NSString *userImageURL = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", strForSocialId];
+                CGPoint offset=CGPointMake(0, 0);
+                [scrollView setContentOffset:offset animated:YES];
+                
+            }
+            
+        }
+        
+    }];
+    
+    [connection start];
+    
 }
 
 @end

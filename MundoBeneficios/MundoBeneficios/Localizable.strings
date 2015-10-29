@@ -24,3 +24,6 @@
 "PLACEHOLDER_PHONE" = "Teléfono";
 "PLACEHOLDER_PRODUCT" = "Productos";
 "TITLE_FACEBOOK" = "Conectar con facebook";
+//ForgetViewController
+"TITLE_MESSAGE_FORGET" = "Ingrese su DNI para recuperar \ntu contraseña";
+"TITLE_BTN_SEND" = "Enviar";

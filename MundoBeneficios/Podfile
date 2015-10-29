@@ -5,6 +5,6 @@ target 'MundoBeneficios' do
   pod "FBSDKLoginKit";
   pod "FBSDKShareKit";
   pod "FBSDKMessengerShareKit";
-  pod "MarqueeLabel";
+  pod "SWRevealViewController";
 end
 

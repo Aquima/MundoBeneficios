@@ -29,12 +29,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MarqueeLabel.xcscheme</key>
+		<key>Pods-MundoBeneficios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MundoBeneficios.xcscheme</key>
+		<key>SWRevealViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,12 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A3155A1CE86FD415A2FA193545BAB2E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>42D941B58EE1635AE52AC2E8FA73D2E6</key>
+		<key>30DE2D7E2C209B6F4AE6063C78F4E2E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -68,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>A48601FEE4437A924848DB48369BA809</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6176AE06277E41A99A5CCECB047517B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

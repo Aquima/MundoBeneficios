@@ -13,7 +13,11 @@
 
 #pragma mark - ViewControllers
 #import "RegisterViewController.h"
+#import "ForgetViewcontroller.h"
+#import "HomeViewController.h"
 
+#pragma mark - SWRevealViewController
+#import "SWRevealViewController.h"
 @interface LogInViewController ()<UITextFieldDelegate>
 
 @end
@@ -22,16 +26,15 @@
     CGSize sizeView;
     FormTexfield*txtDNI;
     FormTexfield*txtPassword;
+    SWRevealViewController *revealController;
 }
-typedef enum textFieldTypes
-{
-    TEXTFIELD_PASSWORD,
-    TEXTFIELD_DNI
-} TextFieldType;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-       
+    
+    revealController = [self revealViewController];
+    
     sizeView = self.view.frame.size;
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background"]];
     [self.view setBackgroundColor:background];
@@ -40,9 +43,7 @@ typedef enum textFieldTypes
     [imgLogo setImage:[UIImage imageNamed:@"logoMundoBeneficios"]];
     [self.view addSubview:imgLogo];
     
-    UIImageView*imgFooterLogo = [[UIImageView alloc] initWithFrame:CGRectMake((sizeView.width-146)/2, sizeView.height-33-40, 146, 33)];
-    [imgFooterLogo setImage:[UIImage imageNamed:@"interseguro"]];
-    [self.view addSubview:imgFooterLogo];
+    
     
     [self.view addSubview:[self getBodyView]];
     [self.view addSubview:[self getFooterView]];
@@ -64,7 +65,6 @@ typedef enum textFieldTypes
     [content setBackgroundColor:[UIColor clearColor]];
     
     txtDNI = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 47, sizeView.width-100, 35)];
-    [txtDNI setTag:TEXTFIELD_DNI];
     [txtDNI setTextColor:[UIColor whiteColor]];
     [txtDNI setFont:[UIFont fontAvenirLTStdLight:14]];
     [txtDNI setPlaceholder:NSLocalizedString(@"PLACEHOLDER_DNI", nil)];
@@ -85,7 +85,7 @@ typedef enum textFieldTypes
     [content addSubview:txtDNI];
     
     txtPassword = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 100, sizeView.width-100, 35)];
-    [txtPassword setTag:TEXTFIELD_PASSWORD];
+
     [txtPassword setTextColor:[UIColor whiteColor]];
     [txtPassword setFont:[UIFont fontAvenirLTStdLight:14]];
     [txtPassword setPlaceholder:NSLocalizedString(@"PLACEHOLDER_PASSWORD", nil)];
@@ -120,6 +120,7 @@ typedef enum textFieldTypes
     btnEnter.layer.borderWidth = 1;
     [btnEnter setBackgroundColor:[UIColor colorFromHexString:@"1ba53f" withAlpha:1]];
     [btnEnter setTitle:NSLocalizedString(@"TITLE_BTN_ENTER", nil) forState:UIControlStateNormal];
+    [btnEnter addTarget:self action:@selector(getLoginService:) forControlEvents:UIControlEventTouchUpInside];
     [content addSubview:btnEnter];
     
     UILabel*lblTitleMessageRegister = [[UILabel alloc] initWithFrame:CGRectMake(0, 240, sizeView.width, 17)];
@@ -154,8 +155,11 @@ typedef enum textFieldTypes
     return content;
 }
 -(UIView*)getFooterView{
-    UIView*content = [[UIView alloc] initWithFrame:CGRectMake(0, sizeView.height, sizeView.width, 50)];
-    [content setBackgroundColor:[UIColor clearColor]];
+    UIView*content = [[UIView alloc] initWithFrame:CGRectMake(0, sizeView.height-33-40, sizeView.width, 50)];
+    [content setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2]];
+    UIImageView*imgFooterLogo = [[UIImageView alloc] initWithFrame:CGRectMake((sizeView.width-146)/2, (50-33)/2, 146, 33)];
+    [imgFooterLogo setImage:[UIImage imageNamed:@"interseguro"]];
+    [content addSubview:imgFooterLogo];
     return content;
 }
 
@@ -199,9 +203,11 @@ typedef enum textFieldTypes
     [self.navigationController pushViewController:registerVC animated:true];
 }
 -(IBAction)openForgetViewController:(id)sender{
-    
+    ForgetViewController * forgetVC = [[ForgetViewController alloc] init];
+    [self.navigationController pushViewController:forgetVC animated:true];
 }
 -(IBAction)getLoginService:(id)sender{
-    
+    HomeViewController*homeVC = [[HomeViewController alloc] init];
+    [revealController setFrontViewController:homeVC];
 }
 @end
