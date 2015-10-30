@@ -128,4 +128,21 @@
 -(IBAction)goBack:(id)sender{
     [self.navigationController popToRootViewControllerAnimated:true];
 }
+#pragma mark - Texfield
+-(void)textFieldDidChange :(UITextField *)theTextField{
+    if (theTextField == txtDNI) {
+        if (theTextField.text.length ==8) {
+            [theTextField resignFirstResponder];
+           
+        }
+    }
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == txtDNI) {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+}
 @end

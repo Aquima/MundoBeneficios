@@ -15,9 +15,13 @@
 #import "RegisterViewController.h"
 #import "ForgetViewcontroller.h"
 #import "HomeViewController.h"
+#import "ExchangeViewController.h"
+#import "AccountViewController.h"
+#import "QuestionViewController.h"
+#import "MessageViewController.h"
+#import "FavoriteViewController.h"
 
-#pragma mark - SWRevealViewController
-#import "SWRevealViewController.h"
+#import "AppDelegate.h"
 @interface LogInViewController ()<UITextFieldDelegate>
 
 @end
@@ -26,15 +30,13 @@
     CGSize sizeView;
     FormTexfield*txtDNI;
     FormTexfield*txtPassword;
-    SWRevealViewController *revealController;
+
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    revealController = [self revealViewController];
-    
+
     sizeView = self.view.frame.size;
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background"]];
     [self.view setBackgroundColor:background];
@@ -42,9 +44,6 @@
     UIImageView*imgLogo = [[UIImageView alloc] initWithFrame:CGRectMake((sizeView.width-(80*1.5))/2, 30, 80*1.5, 35*1.5)];
     [imgLogo setImage:[UIImage imageNamed:@"logoMundoBeneficios"]];
     [self.view addSubview:imgLogo];
-    
-    
-    
     [self.view addSubview:[self getBodyView]];
     [self.view addSubview:[self getFooterView]];
     // Do any additional setup after loading the view.
@@ -207,7 +206,70 @@
     [self.navigationController pushViewController:forgetVC animated:true];
 }
 -(IBAction)getLoginService:(id)sender{
+   
+    AccountViewController*accountVC = [[AccountViewController alloc] init];
+
+    UINavigationController*navAccount = [[UINavigationController alloc] initWithRootViewController:accountVC];
+    navAccount.tabBarItem.title = NSLocalizedString(@"TITLE_TAB_ACCOUNT", nil);
+    navAccount.tabBarItem.image = [UIImage imageNamed:@"accountTabBarIcon"];
+    navAccount.tabBarItem.selectedImage = [[UIImage imageNamed:@"accountTabBarIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    navAccount.tabBarItem.image = [[UIImage imageNamed:@"accountTabBarIconOff"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    
+    navAccount.navigationBarHidden = true;
+
+    QuestionViewController*questionVC = [[QuestionViewController alloc] init];
+    UINavigationController*navQuestion = [[UINavigationController alloc] initWithRootViewController:questionVC];
+    navQuestion.tabBarItem.title = NSLocalizedString(@"TITLE_TAB_QUESTION", nil);
+    navQuestion.tabBarItem.selectedImage = [[UIImage imageNamed:@"questionTabBarIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    navQuestion.tabBarItem.image = [[UIImage imageNamed:@"questionTabBarIconOff"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    
+     navQuestion.navigationBarHidden = true;
+    
+    FavoriteViewController*favoriteVC = [[FavoriteViewController alloc] init];
+    UINavigationController*navFavorite = [[UINavigationController alloc] initWithRootViewController:favoriteVC];
+    navFavorite.tabBarItem.title = NSLocalizedString(@"TITLE_TAB_FAVORITE", nil);
+    navFavorite.tabBarItem.selectedImage = [[UIImage imageNamed:@"favoriteTabBarIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    navFavorite.tabBarItem.image = [[UIImage imageNamed:@"favoriteTabBarIconOff"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    
+     navFavorite.navigationBarHidden = true;
+    
+    MessageViewController*meessageVC = [[MessageViewController alloc] init];
+    UINavigationController*navMessage = [[UINavigationController alloc] initWithRootViewController:meessageVC];
+    navMessage.tabBarItem.title = NSLocalizedString(@"TITLE_TAB_MESSAGE", nil);
+    navMessage.tabBarItem.selectedImage = [[UIImage imageNamed:@"messageTabBarIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    navMessage.tabBarItem.image = [[UIImage imageNamed:@"messageTabBarIconOff"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    
+     navMessage.navigationBarHidden = true;
+    //this windows load first with homeVC
     HomeViewController*homeVC = [[HomeViewController alloc] init];
-    [revealController setFrontViewController:homeVC];
+    UINavigationController*navExchange = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    navExchange.tabBarItem.title = NSLocalizedString(@"TITLE_TAB_EXCHANGE", nil);
+    navExchange.tabBarItem.selectedImage = [[UIImage imageNamed:@"exchangeTabBarIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    navExchange.tabBarItem.image = [[UIImage imageNamed:@"exchangeTabBarIconOff"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    
+     navExchange.navigationBarHidden = true;
+    
+    UITabBarController*tab = [[UITabBarController alloc] init];
+    tab.viewControllers=[NSArray arrayWithObjects:navExchange,navMessage,navFavorite,navQuestion,navAccount, nil];
+    //[tab.view setBackgroundColor:[UIColor redColor]];
+    CGRect frame = CGRectMake(0.0, 0.0, self.view.bounds.size.width, 48);
+    UIView *v = [[UIView alloc] initWithFrame:frame];
+    [v setBackgroundColor:[UIColor colorFromHexString:@"91c3e1" withAlpha:0.2]];
+    [v setAlpha:0.5];
+    [tab.tabBar insertSubview:v atIndex:0];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor colorFromHexString:@"2485c2" withAlpha:1]];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName :  [UIFont fontAvenirLTStdLight:10],
+                                                        NSForegroundColorAttributeName : [UIColor whiteColor]
+                                                        } forState:UIControlStateSelected];
+    
+    
+    // doing this results in an easier to read unselected state then the default iOS 7 one
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontAvenirLTStdLight:10],
+                                                        NSForegroundColorAttributeName :[UIColor colorFromHexString:@"91c3e1" withAlpha:1]
+                                                        } forState:UIControlStateNormal];
+    
+    [self.navigationController pushViewController:tab animated:true];
+    
 }
 @end

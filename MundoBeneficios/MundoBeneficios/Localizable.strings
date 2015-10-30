@@ -14,6 +14,13 @@
 "TITLE_BTN_OPEN_REGISTER" = "Regístrate aquí";
 "TITLE_MESSAGE_FORGET" = "¿Olvidaste tu contraseña?";
 "TITLE_BTN_OPEN_FORGET" = "Recupera tu contraseña";
+
+"TITLE_TAB_ACCOUNT" = "Cuenta";
+"TITLE_TAB_QUESTION" = "Preguntas";
+"TITLE_TAB_FAVORITE" = "Favoritos";
+"TITLE_TAB_MESSAGE" = "Mensajes";
+"TITLE_TAB_EXCHANGE" = "Canjes";
+
 //RegisterViewController
 "TITLE_MESSAGE_REGISTER" = "Si eres un cliente de interseguro y aún no \ntienes una cuenta, registrate con tu DNI:";
 "TITLE_BTN_VERIFY" = "Verificar";
@@ -24,6 +31,7 @@
 "PLACEHOLDER_PHONE" = "Teléfono";
 "PLACEHOLDER_PRODUCT" = "Productos";
 "TITLE_FACEBOOK" = "Conectar con facebook";
+
 //ForgetViewController
 "TITLE_MESSAGE_FORGET" = "Ingrese su DNI para recuperar \ntu contraseña";
 "TITLE_BTN_SEND" = "Enviar";

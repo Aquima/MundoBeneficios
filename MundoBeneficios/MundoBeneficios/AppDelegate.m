@@ -9,9 +9,8 @@
 #import "AppDelegate.h"
 #import "LogInViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import "SWRevealViewController.h"
-#import "RearViewController.h"
-@interface AppDelegate ()<SWRevealViewControllerDelegate>
+
+@interface AppDelegate ()
 
 @end
 
@@ -24,16 +23,8 @@
     LogInViewController*homeVC = [[LogInViewController alloc] init];
     UINavigationController*nav = [[UINavigationController alloc] initWithRootViewController:homeVC];
     nav.navigationBarHidden = true;
-
-    RearViewController *rearViewController = [[RearViewController alloc] init];
     
-    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
-    rearNavigationController.navigationBarHidden = true;
-    
-    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:nav];
-    revealController.delegate = self;
-    
-    self.window.rootViewController = revealController;
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
@@ -150,83 +141,6 @@
                                                        annotation:annotation
             ];
 }
-#pragma mark - SWRevealViewDelegate
 
-- (id <UIViewControllerAnimatedTransitioning>)revealController:(SWRevealViewController *)revealController animationControllerForOperation:(SWRevealControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
-{
-    if ( operation != SWRevealControllerOperationReplaceRightController )
-        return nil;
-    
-    return nil;
-}
-
-
-#define LogDelegates 0
-
-#if LogDelegates
-- (NSString*)stringFromFrontViewPosition:(FrontViewPosition)position
-{
-    NSString *str = nil;
-    if ( position == FrontViewPositionLeftSideMostRemoved ) str = @"FrontViewPositionLeftSideMostRemoved";
-    if ( position == FrontViewPositionLeftSideMost) str = @"FrontViewPositionLeftSideMost";
-    if ( position == FrontViewPositionLeftSide) str = @"FrontViewPositionLeftSide";
-    if ( position == FrontViewPositionLeft ) str = @"FrontViewPositionLeft";
-    if ( position == FrontViewPositionRight ) str = @"FrontViewPositionRight";
-    if ( position == FrontViewPositionRightMost ) str = @"FrontViewPositionRightMost";
-    if ( position == FrontViewPositionRightMostRemoved ) str = @"FrontViewPositionRightMostRemoved";
-    return str;
-}
-
-- (void)revealController:(SWRevealViewController *)revealController willMoveToPosition:(FrontViewPosition)position
-{
-    NSLog( @"%@: %@", NSStringFromSelector(_cmd), [self stringFromFrontViewPosition:position]);
-}
-
-- (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position
-{
-    NSLog( @"%@: %@", NSStringFromSelector(_cmd), [self stringFromFrontViewPosition:position]);
-}
-
-- (void)revealController:(SWRevealViewController *)revealController animateToPosition:(FrontViewPosition)position
-{
-    NSLog( @"%@: %@", NSStringFromSelector(_cmd), [self stringFromFrontViewPosition:position]);
-}
-
-- (void)revealControllerPanGestureBegan:(SWRevealViewController *)revealController;
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-}
-
-- (void)revealControllerPanGestureEnded:(SWRevealViewController *)revealController;
-{
-    NSLog( @"%@", NSStringFromSelector(_cmd) );
-}
-
-- (void)revealController:(SWRevealViewController *)revealController panGestureBeganFromLocation:(CGFloat)location progress:(CGFloat)progress
-{
-    NSLog( @"%@: %f, %f", NSStringFromSelector(_cmd), location, progress);
-}
-
-- (void)revealController:(SWRevealViewController *)revealController panGestureMovedToLocation:(CGFloat)location progress:(CGFloat)progress
-{
-    NSLog( @"%@: %f, %f", NSStringFromSelector(_cmd), location, progress);
-}
-
-- (void)revealController:(SWRevealViewController *)revealController panGestureEndedToLocation:(CGFloat)location progress:(CGFloat)progress
-{
-    NSLog( @"%@: %f, %f", NSStringFromSelector(_cmd), location, progress);
-}
-
-- (void)revealController:(SWRevealViewController *)revealController willAddViewController:(UIViewController *)viewController forOperation:(SWRevealControllerOperation)operation animated:(BOOL)animated
-{
-    NSLog( @"%@: %@, %d", NSStringFromSelector(_cmd), viewController, operation);
-}
-
-- (void)revealController:(SWRevealViewController *)revealController didAddViewController:(UIViewController *)viewController forOperation:(SWRevealControllerOperation)operation animated:(BOOL)animated
-{
-    NSLog( @"%@: %@, %d", NSStringFromSelector(_cmd), viewController, operation);
-}
-
-#endif
 
 @end

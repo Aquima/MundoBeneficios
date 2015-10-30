@@ -23,8 +23,24 @@
 		279305191BDF14C0004C416B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 279305181BDF14C0004C416B /* UIColor+Hex.m */; };
 		279305261BDF1981004C416B /* UIFont+AvenirLTStd.m in Sources */ = {isa = PBXBuildFile; fileRef = 279305231BDF1981004C416B /* UIFont+AvenirLTStd.m */; };
 		279305271BDF1981004C416B /* UIFont+SourceSansPro.m in Sources */ = {isa = PBXBuildFile; fileRef = 279305251BDF1981004C416B /* UIFont+SourceSansPro.m */; };
-		27FF86A61BE243F8006A83AC /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86A51BE243F8006A83AC /* RearViewController.m */; };
 		27FF86AC1BE2468E006A83AC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86AB1BE2468E006A83AC /* HomeViewController.m */; };
+		27FF86B41BE26B28006A83AC /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86B31BE26B28006A83AC /* AccountViewController.m */; };
+		27FF86B71BE26B34006A83AC /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86B61BE26B34006A83AC /* QuestionViewController.m */; };
+		27FF86BA1BE26B45006A83AC /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86B91BE26B45006A83AC /* FavoriteViewController.m */; };
+		27FF86BD1BE26B55006A83AC /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86BC1BE26B55006A83AC /* MessageViewController.m */; };
+		27FF86C01BE26B66006A83AC /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86BF1BE26B66006A83AC /* ExchangeViewController.m */; };
+		27FF86C41BE2DB7E006A83AC /* IconHealtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86C31BE2DB7E006A83AC /* IconHealtView.m */; };
+		27FF86C71BE2EF87006A83AC /* IconDiscountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86C61BE2EF87006A83AC /* IconDiscountView.m */; };
+		27FF86CD1BE2EFC7006A83AC /* IconEntertainmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86CC1BE2EFC7006A83AC /* IconEntertainmentView.m */; };
+		27FF86D01BE2EFEA006A83AC /* IconTravelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86CF1BE2EFEA006A83AC /* IconTravelView.m */; };
+		27FF86D31BE2F000006A83AC /* IconRestaurantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86D21BE2F000006A83AC /* IconRestaurantView.m */; };
+		27FF86D61BE2F014006A83AC /* IconTechnologyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86D51BE2F014006A83AC /* IconTechnologyView.m */; };
+		27FF86DE1BE2F83E006A83AC /* IconEmailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86D91BE2F83E006A83AC /* IconEmailView.m */; };
+		27FF86DF1BE2F83E006A83AC /* IconPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86DB1BE2F83E006A83AC /* IconPasswordView.m */; };
+		27FF86E01BE2F83E006A83AC /* IconDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86DD1BE2F83E006A83AC /* IconDateView.m */; };
+		27FF86E31BE2FAE0006A83AC /* IconUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86E21BE2FAE0006A83AC /* IconUserView.m */; };
+		27FF86E61BE2FC3B006A83AC /* IconProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86E51BE2FC3B006A83AC /* IconProductView.m */; };
+		27FF86E91BE2FC77006A83AC /* IconPhoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FF86E81BE2FC77006A83AC /* IconPhoneView.m */; };
 		5101E3253F3CB183F96D6479 /* libPods-MundoBeneficios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0403F46FE8B726CB1827A554 /* libPods-MundoBeneficios.a */; };
 /* End PBXBuildFile section */
 
@@ -71,10 +87,42 @@
 		279305331BDF1A20004C416B /* AvenirLTStd-MediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-MediumOblique.otf"; sourceTree = "<group>"; };
 		279305341BDF1A20004C416B /* AvenirLTStd-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Oblique.otf"; sourceTree = "<group>"; };
 		279305351BDF1A20004C416B /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
-		27FF86A41BE243F8006A83AC /* RearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewController.h; sourceTree = "<group>"; };
-		27FF86A51BE243F8006A83AC /* RearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewController.m; sourceTree = "<group>"; };
 		27FF86AA1BE2468E006A83AC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		27FF86AB1BE2468E006A83AC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		27FF86B21BE26B28006A83AC /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		27FF86B31BE26B28006A83AC /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		27FF86B51BE26B34006A83AC /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		27FF86B61BE26B34006A83AC /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		27FF86B81BE26B45006A83AC /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		27FF86B91BE26B45006A83AC /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		27FF86BB1BE26B55006A83AC /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		27FF86BC1BE26B55006A83AC /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		27FF86BE1BE26B66006A83AC /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		27FF86BF1BE26B66006A83AC /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		27FF86C21BE2DB7E006A83AC /* IconHealtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconHealtView.h; sourceTree = "<group>"; };
+		27FF86C31BE2DB7E006A83AC /* IconHealtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconHealtView.m; sourceTree = "<group>"; };
+		27FF86C51BE2EF87006A83AC /* IconDiscountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDiscountView.h; sourceTree = "<group>"; };
+		27FF86C61BE2EF87006A83AC /* IconDiscountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDiscountView.m; sourceTree = "<group>"; };
+		27FF86CB1BE2EFC7006A83AC /* IconEntertainmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconEntertainmentView.h; sourceTree = "<group>"; };
+		27FF86CC1BE2EFC7006A83AC /* IconEntertainmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconEntertainmentView.m; sourceTree = "<group>"; };
+		27FF86CE1BE2EFEA006A83AC /* IconTravelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconTravelView.h; sourceTree = "<group>"; };
+		27FF86CF1BE2EFEA006A83AC /* IconTravelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconTravelView.m; sourceTree = "<group>"; };
+		27FF86D11BE2F000006A83AC /* IconRestaurantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconRestaurantView.h; sourceTree = "<group>"; };
+		27FF86D21BE2F000006A83AC /* IconRestaurantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconRestaurantView.m; sourceTree = "<group>"; };
+		27FF86D41BE2F014006A83AC /* IconTechnologyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconTechnologyView.h; sourceTree = "<group>"; };
+		27FF86D51BE2F014006A83AC /* IconTechnologyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconTechnologyView.m; sourceTree = "<group>"; };
+		27FF86D81BE2F83E006A83AC /* IconEmailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconEmailView.h; sourceTree = "<group>"; };
+		27FF86D91BE2F83E006A83AC /* IconEmailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconEmailView.m; sourceTree = "<group>"; };
+		27FF86DA1BE2F83E006A83AC /* IconPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconPasswordView.h; sourceTree = "<group>"; };
+		27FF86DB1BE2F83E006A83AC /* IconPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconPasswordView.m; sourceTree = "<group>"; };
+		27FF86DC1BE2F83E006A83AC /* IconDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDateView.h; sourceTree = "<group>"; };
+		27FF86DD1BE2F83E006A83AC /* IconDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDateView.m; sourceTree = "<group>"; };
+		27FF86E11BE2FAE0006A83AC /* IconUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconUserView.h; sourceTree = "<group>"; };
+		27FF86E21BE2FAE0006A83AC /* IconUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconUserView.m; sourceTree = "<group>"; };
+		27FF86E41BE2FC3B006A83AC /* IconProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconProductView.h; sourceTree = "<group>"; };
+		27FF86E51BE2FC3B006A83AC /* IconProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconProductView.m; sourceTree = "<group>"; };
+		27FF86E71BE2FC77006A83AC /* IconPhoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconPhoneView.h; sourceTree = "<group>"; };
+		27FF86E81BE2FC77006A83AC /* IconPhoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconPhoneView.m; sourceTree = "<group>"; };
 		68980675A2D6643A854147FA /* Pods-MundoBeneficios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MundoBeneficios.release.xcconfig"; path = "Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios.release.xcconfig"; sourceTree = "<group>"; };
 		FE97A11E865AE880BA5C07E5 /* Pods-MundoBeneficios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MundoBeneficios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MundoBeneficios/Pods-MundoBeneficios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +187,7 @@
 		278B6F751BE0525000636EC3 /* RegisterViewController */ = {
 			isa = PBXGroup;
 			children = (
+				27FF86D71BE2F828006A83AC /* Views */,
 				278B6F811BE052A400636EC3 /* RegisterViewController.h */,
 				278B6F821BE052A400636EC3 /* RegisterViewController.m */,
 			);
@@ -188,8 +237,11 @@
 		2793050F1BDF05D9004C416B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				27FF86A41BE243F8006A83AC /* RearViewController.h */,
-				27FF86A51BE243F8006A83AC /* RearViewController.m */,
+				27FF86AD1BE26B13006A83AC /* AccountViewController */,
+				27FF86AE1BE26B13006A83AC /* QuestionViewController */,
+				27FF86AF1BE26B13006A83AC /* FavoriteViewController */,
+				27FF86B01BE26B13006A83AC /* MessageViewController */,
+				27FF86B11BE26B13006A83AC /* ExchangeViewController */,
 				27FF86771BE24214006A83AC /* HomeViewController */,
 				278B6F841BE07CD000636EC3 /* ForgetViewController */,
 				278B6F761BE0526100636EC3 /* LoginViewController */,
@@ -250,10 +302,94 @@
 		27FF86771BE24214006A83AC /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				27FF86C11BE2DB5F006A83AC /* views */,
 				27FF86AA1BE2468E006A83AC /* HomeViewController.h */,
 				27FF86AB1BE2468E006A83AC /* HomeViewController.m */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		27FF86AD1BE26B13006A83AC /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27FF86B21BE26B28006A83AC /* AccountViewController.h */,
+				27FF86B31BE26B28006A83AC /* AccountViewController.m */,
+			);
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		27FF86AE1BE26B13006A83AC /* QuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27FF86B51BE26B34006A83AC /* QuestionViewController.h */,
+				27FF86B61BE26B34006A83AC /* QuestionViewController.m */,
+			);
+			path = QuestionViewController;
+			sourceTree = "<group>";
+		};
+		27FF86AF1BE26B13006A83AC /* FavoriteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27FF86B81BE26B45006A83AC /* FavoriteViewController.h */,
+				27FF86B91BE26B45006A83AC /* FavoriteViewController.m */,
+			);
+			path = FavoriteViewController;
+			sourceTree = "<group>";
+		};
+		27FF86B01BE26B13006A83AC /* MessageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27FF86BB1BE26B55006A83AC /* MessageViewController.h */,
+				27FF86BC1BE26B55006A83AC /* MessageViewController.m */,
+			);
+			path = MessageViewController;
+			sourceTree = "<group>";
+		};
+		27FF86B11BE26B13006A83AC /* ExchangeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27FF86BE1BE26B66006A83AC /* ExchangeViewController.h */,
+				27FF86BF1BE26B66006A83AC /* ExchangeViewController.m */,
+			);
+			path = ExchangeViewController;
+			sourceTree = "<group>";
+		};
+		27FF86C11BE2DB5F006A83AC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				27FF86C21BE2DB7E006A83AC /* IconHealtView.h */,
+				27FF86C31BE2DB7E006A83AC /* IconHealtView.m */,
+				27FF86C51BE2EF87006A83AC /* IconDiscountView.h */,
+				27FF86C61BE2EF87006A83AC /* IconDiscountView.m */,
+				27FF86CB1BE2EFC7006A83AC /* IconEntertainmentView.h */,
+				27FF86CC1BE2EFC7006A83AC /* IconEntertainmentView.m */,
+				27FF86CE1BE2EFEA006A83AC /* IconTravelView.h */,
+				27FF86CF1BE2EFEA006A83AC /* IconTravelView.m */,
+				27FF86D11BE2F000006A83AC /* IconRestaurantView.h */,
+				27FF86D21BE2F000006A83AC /* IconRestaurantView.m */,
+				27FF86D41BE2F014006A83AC /* IconTechnologyView.h */,
+				27FF86D51BE2F014006A83AC /* IconTechnologyView.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		27FF86D71BE2F828006A83AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27FF86D81BE2F83E006A83AC /* IconEmailView.h */,
+				27FF86D91BE2F83E006A83AC /* IconEmailView.m */,
+				27FF86DA1BE2F83E006A83AC /* IconPasswordView.h */,
+				27FF86DB1BE2F83E006A83AC /* IconPasswordView.m */,
+				27FF86DC1BE2F83E006A83AC /* IconDateView.h */,
+				27FF86DD1BE2F83E006A83AC /* IconDateView.m */,
+				27FF86E11BE2FAE0006A83AC /* IconUserView.h */,
+				27FF86E21BE2FAE0006A83AC /* IconUserView.m */,
+				27FF86E41BE2FC3B006A83AC /* IconProductView.h */,
+				27FF86E51BE2FC3B006A83AC /* IconProductView.m */,
+				27FF86E71BE2FC77006A83AC /* IconPhoneView.h */,
+				27FF86E81BE2FC77006A83AC /* IconPhoneView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6A79B49E476B2252D87E6A21 /* Pods */ = {
@@ -396,20 +532,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FF86DE1BE2F83E006A83AC /* IconEmailView.m in Sources */,
 				278B6F831BE052A400636EC3 /* RegisterViewController.m in Sources */,
+				27FF86E91BE2FC77006A83AC /* IconPhoneView.m in Sources */,
 				278B6F7E1BE0528700636EC3 /* LogInViewController.m in Sources */,
-				27FF86A61BE243F8006A83AC /* RearViewController.m in Sources */,
+				27FF86BA1BE26B45006A83AC /* FavoriteViewController.m in Sources */,
+				27FF86B41BE26B28006A83AC /* AccountViewController.m in Sources */,
 				279305271BDF1981004C416B /* UIFont+SourceSansPro.m in Sources */,
+				27FF86D01BE2EFEA006A83AC /* IconTravelView.m in Sources */,
+				27FF86D31BE2F000006A83AC /* IconRestaurantView.m in Sources */,
 				27652C9D1BD5958A00208DD6 /* ViewController.m in Sources */,
 				279305191BDF14C0004C416B /* UIColor+Hex.m in Sources */,
+				27FF86DF1BE2F83E006A83AC /* IconPasswordView.m in Sources */,
+				27FF86C41BE2DB7E006A83AC /* IconHealtView.m in Sources */,
+				27FF86C01BE26B66006A83AC /* ExchangeViewController.m in Sources */,
 				278B6F7F1BE0528700636EC3 /* FormTexfield.m in Sources */,
+				27FF86C71BE2EF87006A83AC /* IconDiscountView.m in Sources */,
 				27FF86AC1BE2468E006A83AC /* HomeViewController.m in Sources */,
 				27652C9A1BD5958A00208DD6 /* AppDelegate.m in Sources */,
+				27FF86E61BE2FC3B006A83AC /* IconProductView.m in Sources */,
+				27FF86D61BE2F014006A83AC /* IconTechnologyView.m in Sources */,
 				278B6F871BE07CDD00636EC3 /* ForgetViewController.m in Sources */,
 				279305261BDF1981004C416B /* UIFont+AvenirLTStd.m in Sources */,
+				27FF86E01BE2F83E006A83AC /* IconDateView.m in Sources */,
+				27FF86B71BE26B34006A83AC /* QuestionViewController.m in Sources */,
 				27652CA31BD5958A00208DD6 /* MundoBeneficios.xcdatamodeld in Sources */,
+				27FF86BD1BE26B55006A83AC /* MessageViewController.m in Sources */,
+				27FF86E31BE2FAE0006A83AC /* IconUserView.m in Sources */,
 				278B6F801BE0528700636EC3 /* MenuButton.m in Sources */,
 				27652C971BD5958A00208DD6 /* main.m in Sources */,
+				27FF86CD1BE2EFC7006A83AC /* IconEntertainmentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

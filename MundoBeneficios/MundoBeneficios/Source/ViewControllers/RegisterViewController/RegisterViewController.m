@@ -13,6 +13,15 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
+#pragma mark - Icons
+#import "IconEmailView.h"
+#import "IconPasswordView.h"
+#import "IconDateView.h"
+#import "IconUserView.h"
+#import "IconProductView.h"
+#import "IconPhoneView.h"
+
+
 #pragma mark - Viewcontrollers
 
 @interface RegisterViewController ()<UITextFieldDelegate>{
@@ -26,7 +35,7 @@
     FormTexfield*txtName;
     FormTexfield*txtLastName;
     FormTexfield*txtEmail;
-    FormTexfield*txtBithday;
+    FormTexfield*txtBirthday;
     FormTexfield*txtPhone;
     FormTexfield*txtProduct;
     UIScrollView*scrollView;
@@ -115,6 +124,10 @@
     
     [content addSubview:txtDNI];
     
+    IconUserView*iconDNI = [[IconUserView alloc] initWithFrame:CGRectMake(txtDNI.frame.origin.x-55, txtDNI.frame.origin.y-15, 55, 55)];
+    [iconDNI setBackgroundColor:[UIColor clearColor]];
+    [content addSubview:iconDNI];
+    
     UIButton*btnEnter = [[UIButton alloc] initWithFrame:CGRectMake((sizeView.width-136)/2, 63,136 , 50)];
     btnEnter.layer.cornerRadius = 25;
     [btnEnter.titleLabel setFont:[UIFont fontAvenirLTStdBook:15]];
@@ -146,6 +159,10 @@
     [txtName setDelegate:self];
     [content addSubview:txtName];
     
+    IconUserView*iconName = [[IconUserView alloc] initWithFrame:CGRectMake(txtName.frame.origin.x-55, txtName.frame.origin.y-15, 55, 55)];
+    [iconName setBackgroundColor:[UIColor clearColor]];
+    [content addSubview:iconName];
+    
     txtLastName = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 182, sizeView.width-100, 35)];
     [txtLastName setTextColor:[UIColor whiteColor]];
     [txtLastName setFont:[UIFont fontAvenirLTStdLight:14]];
@@ -165,6 +182,10 @@
     txtLastName.secureTextEntry = false;
     [txtLastName setDelegate:self];
     [content addSubview:txtLastName];
+    
+    IconUserView*iconLastName = [[IconUserView alloc] initWithFrame:CGRectMake(txtLastName.frame.origin.x-55, txtLastName.frame.origin.y-15, 55, 55)];
+    [iconLastName setBackgroundColor:[UIColor clearColor]];
+    [content addSubview:iconLastName];
     
     txtEmail = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 237, sizeView.width-100, 35)];
     [txtEmail setTextColor:[UIColor whiteColor]];
@@ -186,25 +207,33 @@
     [txtEmail setDelegate:self];
     [content addSubview:txtEmail];
     
-    txtBithday = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 292, sizeView.width-100, 35)];
-    [txtBithday setTextColor:[UIColor whiteColor]];
-    [txtBithday setFont:[UIFont fontAvenirLTStdLight:14]];
-    [txtBithday setPlaceholder:NSLocalizedString(@"PLACEHOLDER_BIRTHDAY", nil)];
-    [txtBithday addTarget:self
+    IconEmailView*iconEmail = [[IconEmailView alloc] initWithFrame:CGRectMake(txtEmail.frame.origin.x-55, txtEmail.frame.origin.y-15, 55, 55)];
+    [iconEmail setBackgroundColor:[UIColor clearColor]];
+    [content addSubview:iconEmail];
+    
+    txtBirthday = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 292, sizeView.width-100, 35)];
+    [txtBirthday setTextColor:[UIColor whiteColor]];
+    [txtBirthday setFont:[UIFont fontAvenirLTStdLight:14]];
+    [txtBirthday setPlaceholder:NSLocalizedString(@"PLACEHOLDER_BIRTHDAY", nil)];
+    [txtBirthday addTarget:self
                 action:@selector(textFieldDidChange:)
       forControlEvents:UIControlEventEditingChanged];
-    if ([txtBithday respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+    if ([txtBirthday respondsToSelector:@selector(setAttributedPlaceholder:)]) {
         UIColor *color = [UIColor colorWithWhite:1 alpha:0.8];
-        txtBithday.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"PLACEHOLDER_BIRTHDAY", nil) attributes:@{NSForegroundColorAttributeName: color}];
+        txtBirthday.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"PLACEHOLDER_BIRTHDAY", nil) attributes:@{NSForegroundColorAttributeName: color}];
     } else {
         NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
         // TODO: Add fall-back code to set placeholder color.
     }
-    [txtBithday setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
-    txtBithday.returnKeyType = UIReturnKeyDone;
-    txtBithday.secureTextEntry = false;
-    [txtBithday setDelegate:self];
-    [content addSubview:txtBithday];
+    [txtBirthday setTintColor:[UIColor colorWithWhite:1 alpha:0.8]];
+    txtBirthday.returnKeyType = UIReturnKeyDone;
+    txtBirthday.secureTextEntry = false;
+    [txtBirthday setDelegate:self];
+    [content addSubview:txtBirthday];
+    
+    IconDateView*iconDate = [[IconDateView alloc] initWithFrame:CGRectMake(txtBirthday.frame.origin.x-55, txtBirthday.frame.origin.y-15, 55, 55)];
+    [iconDate setBackgroundColor:[UIColor clearColor]];
+    [content addSubview:iconDate];
     
     txtPhone = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 347, sizeView.width-100, 35)];
     [txtPhone setTextColor:[UIColor whiteColor]];
@@ -226,6 +255,10 @@
     [txtPhone setDelegate:self];
     [content addSubview:txtPhone];
     
+    IconPhoneView*iconPhone = [[IconPhoneView alloc] initWithFrame:CGRectMake(txtPhone.frame.origin.x-55, txtPhone.frame.origin.y-15, 55, 55)];
+    [iconPhone setBackgroundColor:[UIColor clearColor]];
+    [content addSubview:iconPhone];
+    
     txtProduct = [[FormTexfield alloc] initWithFrame:CGRectMake(50, 402, sizeView.width-100, 35)];
     [txtProduct setTextColor:[UIColor whiteColor]];
     [txtProduct setFont:[UIFont fontAvenirLTStdLight:14]];
@@ -245,6 +278,10 @@
     txtProduct.secureTextEntry = false;
     [txtProduct setDelegate:self];
     [content addSubview:txtProduct];
+    
+    IconProductView*iconProduct = [[IconProductView alloc] initWithFrame:CGRectMake(txtProduct.frame.origin.x-55, txtProduct.frame.origin.y-15, 55, 55)];
+    [iconProduct setBackgroundColor:[UIColor clearColor]];
+    [content addSubview:iconProduct];
     
     UIView * contentFacebookBtn = [[UIView alloc] initWithFrame:CGRectMake((sizeView.width-230)/2, 468, 230, 46)];
     contentFacebookBtn.layer.cornerRadius = 23;
