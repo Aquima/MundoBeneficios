@@ -7,7 +7,7 @@
 */
 //LogInViewControllerr
 "TITLE_MESSAGE" = "Introduce tus datos para ingresar:";
-"PLACEHOLDER_DNI" = "DNI";
+"PLACEHOLDER_DNI_LOGIN" = "DNI o Nombre de Usuario";
 "PLACEHOLDER_PASSWORD" = "Contraseña";
 "TITLE_BTN_ENTER" = "Ingresar";
 "TITLE_MESSAGE_REGISTER" = "Si no tienes una cuenta";
@@ -22,6 +22,7 @@
 "TITLE_TAB_EXCHANGE" = "Canjes";
 
 //RegisterViewController
+"PLACEHOLDER_DNI" = "DNI";
 "TITLE_MESSAGE_REGISTER" = "Si eres un cliente de interseguro y aún no \ntienes una cuenta, registrate con tu DNI:";
 "TITLE_BTN_VERIFY" = "Verificar";
 "PLACEHOLDER_NAME" = "Nombre";
@@ -31,7 +32,10 @@
 "PLACEHOLDER_PHONE" = "Teléfono";
 "PLACEHOLDER_PRODUCT" = "Productos";
 "TITLE_FACEBOOK" = "Conectar con facebook";
-
+"TITLE_BTN_DONE" = "Hecho";
+"TITLE_BTN_ACCEPT" = "Aceptar";
+"TITLE_APP" = "Mundo Beneficios";
+"TITLE_BTN_REGISTER" = "Regístrar";
 //ForgetViewController
 "TITLE_MESSAGE_FORGET" = "Ingrese su DNI para recuperar \ntu contraseña";
 "TITLE_BTN_SEND" = "Enviar";
